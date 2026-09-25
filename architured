@@ -1,0 +1,10 @@
+src/
+├── components/
+│   ├── ui/           # Small atoms (Buttons, Badges, Icons)
+│   ├── blocks/       # Big sections (Hero, About, Projects)
+│   ├── magicui/      # Complex animations (Marquee, BlurFade)
+│   └── layout/       # Navbar, Footer, PageWrapper
+├── data/
+│   └── resume.tsx    # All the text/links live here (The "Database")
+├── hooks/            # Custom logic (e.g., useScroll, useTheme)
+└── styles/           # Tailwind setup

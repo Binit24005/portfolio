@@ -1,0 +1,45 @@
+PORTFOLIO SITE DEVELOPMENT BREAKDOWN
+====================================
+
+PHASE 1: THE DESIGN PHILOSOPHY ("The Vibe")
+-------------------------------------------
+Before building components, established "Design Rules" for consistency:
+
+"Content First, UI Second": Minimal design (lots of whitespace/dark space). 
+Design proves skills without distracting from content.
+
+"Bento" Aesthetic: Inspired by Apple's promotional materials or linear.app.
+Everything organized in boxes (grids), rounded corners, subtle borders.
+
+Micro-Interactions are Key: Every hover reacts. Elements glow, scale, or shift 
+on interaction. Static pages are boring.
+
+Typography Hierarchy: Large, bold headings for impact. Muted gray text for 
+secondary info. Uses variable font (Inter or Geist Sans) for crisp rendering.
+
+PHASE 2: COMPONENT ARCHITECTURE (The "Lego" Plan)
+-------------------------------------------------
+Whiteboard breakdown into reusable "Atoms" and "Molecules" using Vite + React:
+
+1. LAYOUT WRAPPER (Layout.jsx)
+   - Dark background pattern (dot matrix/grid)
+   - Central width constraint (prevents stretching on large monitors)
+   - Global font settings
+
+2. NAVIGATION STRATEGY (FloatingDock vs Navbar)
+   Thought: "Standard navbars are boring. Want app-like feel."
+   Solution: macOS-style Floating Dock (bottom) or sticky header
+   Behavior: Accessible but unintrusive
+
+3. SECTIONS (The "Organisms")
+   - HeroSection: Big text, profile pic, status ("Open to work")
+   - TechStack (Marquee): Infinite scrolling slider shows tool breadth
+   - ProjectGallery: Core feature using reusable <ProjectCard />
+     Passes data: Title, Desc, Link, Image
+   - ContactBlock: Direct email/social access
+
+PHASE 3: DATA STRATEGY (No Backend? No Problem.)
+------------------------------------------------
+Decoupled data from UI to avoid hardcoding:
+
+CONFIG FILE STRUCTURE (config.ts or data.js):
